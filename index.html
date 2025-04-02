@@ -20,20 +20,19 @@
             width: 100%;
         }
         .left {
-            flex: 1;
+            flex: 2;
             background: url('futbal logo 2.png') no-repeat center center;
             background-size: cover;
         }
         .right {
-            flex: 1;
+            flex: 2;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
             color: #C4E17F;
             text-align: center;
             padding: 20px;
-            position: relative;
         }
         .vertical-text {
             font-family: 'Horizon', sans-serif;
@@ -41,14 +40,21 @@
             font-size: 114px;
             writing-mode: vertical-rl;
             text-orientation: upright;
-            letter-spacing: 10px;
+            letter-spacing: 5px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .horizontal-text {
             font-family: 'Garet', sans-serif;
             font-size: 36px;
             text-transform: uppercase;
-            position: absolute;
-            bottom: 30%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -62,3 +68,4 @@
     </div>
 </body>
 </html>
+
