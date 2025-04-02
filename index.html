@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paris Economics Football Tournament</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Horizon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Garet:wght@700&display=swap');
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -18,7 +21,7 @@
         }
         .left {
             flex: 1;
-            background: url('image1.png') no-repeat center center;
+            background: url('futbal logo 2.png') no-repeat center center;
             background-size: cover;
         }
         .right {
@@ -30,16 +33,22 @@
             color: #C4E17F;
             text-align: center;
             padding: 20px;
+            position: relative;
         }
-        .right h1 {
-            font-size: 4rem;
-            margin: 0;
+        .vertical-text {
+            font-family: 'Horizon', sans-serif;
+            font-weight: bold;
+            font-size: 114px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 10px;
         }
-        .right p {
-            font-size: 1.5rem;
-        }
-        .arrows {
-            margin-top: 20px;
+        .horizontal-text {
+            font-family: 'Garet', sans-serif;
+            font-size: 36px;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 30%;
         }
     </style>
 </head>
@@ -47,13 +56,8 @@
     <div class="container">
         <div class="left"></div>
         <div class="right">
-            <h1>COME AND PLAY</h1>
-            <p>ANSWER THE FOOTBALL CALL.</p>
-            <div class="arrows">
-                &#9650;<br>
-                &#9650;&#9650;<br>
-                &#9650;&#9650;&#9650;
-            </div>
+            <div class="vertical-text">COME AND PLAY</div>
+            <div class="horizontal-text">ANSWER<br>THE<br>FÚTBOL<br>CALL.</div>
         </div>
     </div>
 </body>
