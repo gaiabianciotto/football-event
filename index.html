@@ -4,37 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Event</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            overflow-x: hidden;
-        }
-        .image-container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="image-container">
-        <img src="event_banner/1.png" alt="Event Image 1">
-    </div>
-    <div class="image-container">
-        <img src="event_banner/2.png" alt="Event Image 2">
-    </div>
-    <div class="image-container">
-        <img src="event_banner/3.png" alt="Event Image 3">
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <div class="slideshow-container">
+            <div class="slide fade"><img src="1.png" alt="Banner 1"></div>
+            <div class="slide fade"><img src="2.png" alt="Banner 2"></div>
+            <div class="slide fade"><img src="3.png" alt="Banner 3"></div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
 </html>
