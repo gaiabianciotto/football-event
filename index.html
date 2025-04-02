@@ -4,19 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football Event</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            background-size: cover;
+            background-position: center;
+        }
+        #section1 { background-image: url('image1.png'); }
+        #section2 { background-image: url('image2.png'); }
+        #section3 { background-image: url('image3.png'); }
+    </style>
 </head>
 <body>
-    <section class="banner" id="banner1">
-        <img src="1.png" alt="Banner 1">
-    </section>
-    <section class="banner" id="banner2">
-        <img src="2.png" alt="Banner 2">
-    </section>
-    <section class="banner" id="banner3">
-        <img src="3.png" alt="Banner 3">
-    </section>
-    
-    <script src="script.js"></script>
+    <div class="section" id="section1"></div>
+    <div class="section" id="section2"></div>
+    <div class="section" id="section3"></div>
 </body>
 </html>
+
