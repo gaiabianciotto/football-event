@@ -9,9 +9,7 @@
             margin: 0;
             padding: 0;
             background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            overflow-x: hidden;
         }
         .image-container {
             width: 100vw;
@@ -21,21 +19,22 @@
             align-items: center;
         }
         .image-container img {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="image-container">
-        <img src="./event_banner/1.png" alt="Event Image 1">
+        <img src="event_banner/1.png" alt="Event Image 1">
     </div>
     <div class="image-container">
-        <img src="./event_banner/2.png" alt="Event Image 2">
+        <img src="event_banner/2.png" alt="Event Image 2">
     </div>
     <div class="image-container">
-        <img src="./event_banner/3.png" alt="Event Image 3">
+        <img src="event_banner/3.png" alt="Event Image 3">
     </div>
 </body>
 </html>
