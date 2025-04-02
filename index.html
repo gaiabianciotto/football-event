@@ -3,40 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Event</title>
+    <title>Paris Economics Football Tournament</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-snap-type: y mandatory;
-            scroll-behavior: smooth;
-        }
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-        }
-        .section {
-            width: 100vw;
-            height: 150vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            scroll-snap-align: start;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            height: 100vh;
+            background-color: #123D24;
         }
-        #section1 { background-image: url('./image1.png'); }
-        #section2 { background-image: url('./image2.png'); }
-        #section3 { background-image: url('./image3.png'); }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left {
+            flex: 1;
+            background: url('image1.png') no-repeat center center;
+            background-size: cover;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #C4E17F;
+            text-align: center;
+            padding: 20px;
+        }
+        .right h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        .right p {
+            font-size: 1.5rem;
+        }
+        .arrows {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="section" id="section1"></div>
-    <div class="section" id="section2"></div>
-    <div class="section" id="section3"></div>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right">
+            <h1>COME AND PLAY</h1>
+            <p>ANSWER THE FOOTBALL CALL.</p>
+            <div class="arrows">
+                &#9650;<br>
+                &#9650;&#9650;<br>
+                &#9650;&#9650;&#9650;
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
