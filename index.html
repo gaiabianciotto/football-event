@@ -107,38 +107,38 @@
     }
 
     /* Second section */
-    .second-section {
-        background-color: #30513d;
-        background-image: url('futbal_background.jpeg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: auto;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 100px 50px;
-    }
+.second-section {
+  background-color: #30513d;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 50px;
+  gap: 60px; /* spacing between texts */
+}
 
+.second-section .first-text {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: #acc78b;
+  max-width: 1000px;
+  align-self: flex-start; /* forces it to align to left */
+}
 
-    .second-section .first-text {
-      font-size: 36px;
-      font-weight: bold;
-      text-align: right;
-      text-transform: uppercase;
-      margin-bottom: 60px;
-      color: #acc78b;
-      max-width: 1000px;
-      margin-left: auto;
-    }
+.second-section .second-text {
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.6;
+  color: #acc78b;
+  max-width: 800px;
+  align-self: flex-end; /* forces it to align to right */
+}
 
-    .second-section .second-text {
-      font-size: 20px;
-      text-align: left;
-      line-height: 1.6;
-      color: #acc78b;
-      max-width: 800px;
-    }
 
     @media (max-width: 768px) {
       .horizontal-text {
@@ -190,11 +190,12 @@
       While you were estimating regressions, we were training in the rain.<br>
       While you were solving models, we were studying the tactics.<br>
       While you were counting the citations, we were counting the goals.<br>
-      We have been trained into a machine hungry to prove his worth outside the department walls.<br>
+      We have been trained into a machine hungry to prove his worth outside the department walls.<br> 
       This city is too small for all of us:<br>
       only one department can carry the title of Ambassador of Futbol to Paris' Economics Departments.
     </div>
   </section>
+  
 </body>
 </html>
 
