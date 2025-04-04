@@ -13,13 +13,15 @@
             display: flex;
             height: 100vh;
             background-color: #30513d;
+            overflow: hidden; /* Prevents scrollbars */
         }
 
         .container {
             display: flex;
             width: 100%;
             height: 100%;
-            position: relative; /* Allow the image to be positioned between .left and .right */
+            position: relative;
+            flex-wrap: wrap; /* Ensures that content wraps on smaller screens */
         }
 
         .left {
@@ -27,6 +29,8 @@
             background: url('futbal logo.png') no-repeat left center;
             background-size: contain;
             background-position: left;
+            min-width: 200px; /* Set a minimum width to avoid collapsing */
+            height: 100%;
         }
 
         .right {
@@ -35,19 +39,21 @@
             justify-content: center;
             align-items: center;
             padding-left: 20px;
+            min-width: 300px; /* Set a minimum width for the right side */
+            height: 100%;
         }
 
         .come-and-play-wrapper {
-            position: absolute; /* Position the image absolutely in the container */
-            left: 50%; /* Position it in the center horizontally */
-            transform: translateX(-50%); /* Offset by half of its width to make it perfectly centered */
-            top: 50%; /* Position it in the center vertically */
-            transform: translate(-50%, -50%); /* Offset by half of its height to make it perfectly centered */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .come-and-play-img {
-            height: 100vh; /* Set the height to 100% of the viewport height */
-            width: auto; /* Adjust width to maintain aspect ratio */
+            height: 100vh;
+            width: auto;
+            max-width: 100%; /* Ensure image doesn't overflow */
         }
 
         .text-and-point {
@@ -102,8 +108,39 @@
         }
 
         .point-img {
-            width: 120px; /* Bigger point image */
+            width: 120px;
             margin-top: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack the left and right sections vertically */
+            }
+
+            .left, .right {
+                flex: 1; /* Allow both sections to take equal width */
+                min-width: 100%; /* Allow both sections to take full width on small screens */
+            }
+
+            .come-and-play-img {
+                height: auto; /* Let the image adjust its size according to the screen width */
+                width: 90%; /* Give some margin to the image on small screens */
+            }
+
+            .horizontal-text {
+                font-size: 50px; /* Make the text smaller on mobile */
+            }
+
+            .point-img {
+                width: 80px; /* Reduce the size of the point image on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .horizontal-text {
+                font-size: 35px; /* Make the text even smaller on very small screens */
+            }
         }
     </style>
 </head>
