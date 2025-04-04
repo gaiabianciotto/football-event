@@ -42,8 +42,15 @@
             gap: 30px;
         }
 
+        .come-and-play-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
         .come-and-play-img {
-            height: 100vh;
+            max-height: 100%;
             width: auto;
         }
 
@@ -72,7 +79,9 @@
         <div class="left"></div>
         <div class="right">
             <div class="content-wrapper">
-                <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
+                <div class="come-and-play-wrapper">
+                    <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
+                </div>
                 <div class="text-and-point">
                     <div class="horizontal-text">ANSWER<br>THE<br>FÚTBOL<br>CALL.</div>
                     <img src="point.png" alt="Point" class="point-img">
@@ -82,3 +91,4 @@
     </div>
 </body>
 </html>
+
