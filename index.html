@@ -13,6 +13,8 @@
             display: flex;
             height: 100vh;
             background-color: #30513d;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
@@ -33,43 +35,39 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-left: 20px;
         }
 
         .content-wrapper {
             display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .come-and-play-wrapper {
-            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100%;
         }
 
         .come-and-play-img {
-            max-height: 100%;
-            width: auto;
+            height: 100vh; /* Makes the image take the full height of the viewport */
+            object-fit: contain; /* Ensures the image scales properly without stretching */
         }
 
         .text-and-point {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
+            color: white;
         }
 
         .horizontal-text {
             font-family: 'Garet', sans-serif;
             font-size: 36px;
             text-transform: uppercase;
-            text-align: left;
+            text-align: center;
             color: #acc78b;
+            line-height: 1.2;
         }
 
         .point-img {
-            width: 120px; /* Bigger point image */
+            width: 120px;
             margin-top: 10px;
         }
     </style>
@@ -79,9 +77,7 @@
         <div class="left"></div>
         <div class="right">
             <div class="content-wrapper">
-                <div class="come-and-play-wrapper">
-                    <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
-                </div>
+                <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
                 <div class="text-and-point">
                     <div class="horizontal-text">ANSWER<br>THE<br>FÚTBOL<br>CALL.</div>
                     <img src="point.png" alt="Point" class="point-img">
@@ -91,5 +87,6 @@
     </div>
 </body>
 </html>
+
 
 
