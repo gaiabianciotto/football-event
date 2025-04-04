@@ -151,62 +151,68 @@
         font-size: 16px;
       }
     }
-    
+
   /* Third section */
-  .third-section {
-    background-color: #30513d;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 20px 100px;
-    position: relative;
-    text-align: center;
-  }
-
-  .text-top {
-    color: #acc78b;
-    font-size: 20px;
-    max-width: 900px;
-    margin-top: 40px;
-  }
-
-  .text-middle {
-    color: #acc78b;
-    font-size: 36px;
-    font-weight: 900;
-    margin: auto 0;
-  }
-
-  .test-button {
-    background-color: #adfe02;
-    color: black;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 6px;
-    position: absolute;
-    bottom: 40px;
-  }
-
-  @media (max-width: 768px) {
-    .horizontal-text {
-      font-size: 50px;
+    .third-section {
+      background-color: #30513d;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px 100px;
+      position: relative;
+      text-align: center;
     }
 
-    .second-section .first-text {
-      font-size: 24px;
+    .text-top {
+      color: #acc78b;
+      font-size: 32px;
+      font-weight: bold;
+      max-width: 900px;
+      margin-top: 40px;
     }
 
-    .second-section .second-text {
-      font-size: 16px;
+    .text-middle-container {
+      position: relative;
+      display: inline-block;
     }
-  }
+
+    .background-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+    }
+
+    .text-middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 36px;
+      font-weight: 900;
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .test-button {
+      background-color: #adfe02;
+      color: black;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      position: absolute;
+      bottom: 40px;
+    }
   </style>
 </head>
 <body>
+
 
 <style>
   /* Ball styling */
@@ -300,24 +306,26 @@
   </section>
   
   <!-- Third Page -->
-<section class="third-section">
-    <div class="text-top">
-      YOU CAN EITHER PROVE YOUR WORTH ON THE 105 X 68 MATRIX, OR LET US CLAIM THIS TITLE.<br>
-      SO GATHER YOUR PROFESSORS, YOUR PHDS, YOUR PREDOCS AND RAS AND COME FACE US<br>
-      IN AN EPIC TOURNAMENT!
+  <section class="third-section">
+    <div class="text-top" style="font-size: 40px; text-align: center;">
+      YOU CAN EITHER PROVE YOUR WORTH ON THE 105 X 68 MATRIX, <br>
+      OR LET US CLAIM THIS TITLE.<br>
+      SO GATHER YOUR PROFESSORS, YOUR PHDS, <br>
+      YOUR PREDOCS AND RAS <br>
+      AND COME FACE US IN AN EPIC TOURNAMENT!
     </div>
   
-    <div class="text-middle">
-      TAKE THIS TEST TO HELP US <br>
-      MAKE THIS DREAM COME TRUE
+    <div class="text-middle-container">
+      <img src="futbal_background.jpeg" alt="Football Field" class="background-image">
+      <div class="text-middle">TAKE THIS TEST TO HELP US <br> MAKE THIS DREAM COME TRUE</div>
     </div>
   
     <a href="quiz.html" class="test-button">TAKE THE TEST</a>
   </section>
   
-
 </body>
 </html>
+
 
 
 
