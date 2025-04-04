@@ -1,132 +1,195 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paris Economics Football Tournament</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Garet:wght@700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris Economics Football Tournament</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Garet:wght@700&display=swap');
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh;
-            background-color: #30513d;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            position: relative; /* Allow the image to be positioned between .left and .right */
-        }
+    html, body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      color: #acc78b;
+    }
 
-        .left {
-            flex: 2;
-            background: url('futbal logo.png') no-repeat left center;
-            background-size: contain;
-            background-position: left;
-        }
+    section {
+      width: 100%;
+      height: 100vh;
+    }
 
-        .right {
-            flex: 2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-left: 20px;
-        }
+    /* First section */
+    .first-section {
+      display: flex;
+      background-color: #30513d;
+    }
 
-        .come-and-play-wrapper {
-            position: absolute; /* Position the image absolutely in the container */
-            left: 50%; /* Position it in the center horizontally */
-            transform: translateX(-50%); /* Offset by half of its width to make it perfectly centered */
-            top: 50%; /* Position it in the center vertically */
-            transform: translate(-50%, -50%); /* Offset by half of its height to make it perfectly centered */
-        }
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
 
-        .come-and-play-img {
-            height: 100vh; /* Set the height to 100% of the viewport height */
-            width: auto; /* Adjust width to maintain aspect ratio */
-        }
+    .left {
+      flex: 2;
+      background: url('futbal logo.png') no-repeat left center;
+      background-size: contain;
+    }
 
-        .text-and-point {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    .come-and-play-wrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-        .horizontal-text {
-            font-family: 'Garet', sans-serif;
-            font-size: 80px;
-            text-transform: uppercase;
-            text-align: left;
-            color: #acc78b;
-            opacity: 0;
-            animation: fadeIn 4s ease-in-out forwards;
-            display: flex;
-            flex-direction: column;
-        }
+    .come-and-play-img {
+      height: 100vh;
+      width: auto;
+    }
 
-        .horizontal-text div {
-            opacity: 0;
-            animation: fadeInWord 1s ease-in-out forwards;
-        }
+    .right {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 20px;
+    }
 
-        .horizontal-text div:nth-child(1) {
-            animation-delay: 0s;
-        }
+    .text-and-point {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-        .horizontal-text div:nth-child(2) {
-            animation-delay: 1s;
-        }
+    .horizontal-text {
+      font-family: 'Garet', sans-serif;
+      font-size: 80px;
+      text-transform: uppercase;
+      text-align: left;
+      color: #acc78b;
+      opacity: 0;
+      animation: fadeIn 4s ease-in-out forwards;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .horizontal-text div:nth-child(3) {
-            animation-delay: 2s;
-        }
+    .horizontal-text div {
+      opacity: 0;
+      animation: fadeInWord 1s ease-in-out forwards;
+    }
 
-        .horizontal-text div:nth-child(4) {
-            animation-delay: 3s;
-        }
+    .horizontal-text div:nth-child(1) { animation-delay: 0s; }
+    .horizontal-text div:nth-child(2) { animation-delay: 1s; }
+    .horizontal-text div:nth-child(3) { animation-delay: 2s; }
+    .horizontal-text div:nth-child(4) { animation-delay: 3s; }
 
-        /* Animation for fading in the entire text */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
 
-        /* Animation for each word fading in */
-        @keyframes fadeInWord {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+    @keyframes fadeInWord {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
 
-        .point-img {
-            width: 120px; /* Bigger point image */
-            margin-top: 10px;
-        }
-    </style>
+    .point-img {
+      width: 120px;
+      margin-top: 10px;
+    }
+
+    /* Second section */
+    .second-section {
+      background: url('futbal background.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 50px;
+    }
+
+    .second-section .first-text {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: right;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      color: #acc78b;
+      max-width: 1000px;
+      margin-left: auto;
+    }
+
+    .second-section .second-text {
+      font-size: 20px;
+      text-align: left;
+      line-height: 1.6;
+      color: #acc78b;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      .horizontal-text {
+        font-size: 50px;
+      }
+      .second-section .first-text {
+        font-size: 24px;
+      }
+      .second-section .second-text {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- First Page -->
+  <section class="first-section">
     <div class="container">
-        <div class="left"></div>
-        <div class="come-and-play-wrapper">
-            <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
-        </div>
-        <div class="right">
-            <div class="content-wrapper">
-                <div class="text-and-point">
-                    <div class="horizontal-text">
-                        <div>ANSWER</div>
-                        <div>THE</div>
-                        <div>FÚTBOL</div>
-                        <div>CALL</div>
-                    </div>
-                    <img src="point.png" alt="Point" class="point-img">
-                </div>
+      <div class="left"></div>
+      <div class="come-and-play-wrapper">
+        <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
+      </div>
+      <div class="right">
+        <div class="content-wrapper">
+          <div class="text-and-point">
+            <div class="horizontal-text">
+              <div>ANSWER</div>
+              <div>THE</div>
+              <div>FÚTBOL</div>
+              <div>CALL</div>
             </div>
+            <img src="point.png" alt="Point" class="point-img">
+          </div>
         </div>
+      </div>
     </div>
+  </section>
+
+  <!-- Second Page -->
+  <section class="second-section">
+    <div class="first-text">
+      "TO THE PEOPLES OF SCIENCES PO, CREST AND HEC"<br>
+      PSE UNILATERALLY DECLARES AN<br>
+      UNPROVOKED AND UNCOMPROMISING<br>
+      FUTBOL WAR ON<br>
+      YOUR DEPARTMENTS.
+    </div>
+    <div class="second-text">
+      You didn't see this coming. But now, Futbol is knocking at your door.<br>
+      While you were estimating regressions, we were training in the rain.<br>
+      While you were solving models, we were studying the tactics.<br>
+      While you were counting the citations, we were counting the goals.<br><br>
+      We have been trained into a machine hungry to prove his worth outside the department walls. This city is too small for all of us: only one department can carry the title of Ambassador of Futbol to Paris' Economics Departments.
+    </div>
+  </section>
 </body>
 </html>
 
