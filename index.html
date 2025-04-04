@@ -18,44 +18,59 @@
         .container {
             display: flex;
             width: 100%;
+            height: 100%;
         }
         .left {
             flex: 2;
             background: url('futbal logo.png') no-repeat center center;
-
-            background-size: cover;
+            background-size: contain; /* Adjust image to fit */
+            background-position: center;
         }
         .right {
             flex: 2;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             color: #C4E17F;
-            text-align: center;
             padding: 20px;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
         .vertical-text {
             font-family: 'Horizon', sans-serif;
             font-weight: bold;
-            font-size: 114px;
+            font-size: 80px;
             writing-mode: vertical-rl;
             text-orientation: upright;
             letter-spacing: 5px;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            transform: rotate(90deg); /* Rotating text 90 degrees to the right */
+            margin-left: 10px;
         }
         .horizontal-text {
             font-family: 'Garet', sans-serif;
             font-size: 36px;
             text-transform: uppercase;
-            flex: 1;
+            text-align: left;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+        }
+        .design {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #000;
+            padding: 5px;
         }
     </style>
 </head>
@@ -63,10 +78,12 @@
     <div class="container">
         <div class="left"></div>
         <div class="right">
-            <div class="vertical-text">COME AND PLAY</div>
-            <div class="horizontal-text">ANSWER<br>THE<br>FÚTBOL<br>CALL.</div>
+            <div class="text-container">
+                <div class="vertical-text">COME AND PLAY</div>
+                <div class="horizontal-text">ANSWER<br>THE<br>FÚTBOL<br>CALL.</div>
+            </div>
         </div>
     </div>
+    <div class="design">^</div>
 </body>
 </html>
-
