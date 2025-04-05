@@ -56,10 +56,7 @@
 </head>
 <body>
   <h1>⚽ Answer the Fútbol Call!</h1>
- <!-- modify this form HTML and place wherever you want your form -->
-<!-- modify this form HTML and place wherever you want your form -->
-<form action="https://formspree.io/f/xjkyadee" method="POST">
-
+  <form action="https://formspree.io/f/xjkyadee" method="POST" onsubmit="handleSubmit(event)">
     <div class="question">
       <label>1. What school are you in?</label>
       <input type="radio" name="school" value="PSE" required /> PSE<br/>
@@ -101,22 +98,20 @@
 
     <label for="email">Your Email:</label>
     <input type="email" id="email" name="_replyto" required>
-      
-        <!-- Your other form fields -->
-        
+
     <button class="submit-btn" type="submit">Submit</button>
   </form>
 
   <script>
-    // JavaScript function to handle form submission
     function handleSubmit(event) {
-      event.preventDefault(); // Prevents the default form submission
-
-      // Optionally, you can save the form data here (via AJAX or any other method)
-
-      // Redirect to the thankyou.html page
+      event.preventDefault(); // Prevents the form from being submitted in the usual way
+      
+      // You can use AJAX to submit the form data here if you prefer, but it's optional.
+      
+      // Redirect to the thank you page after successful submission
       window.location.href = "thankyou.html";
     }
   </script>
 </body>
 </html>
+
