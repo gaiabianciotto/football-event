@@ -139,6 +139,15 @@
   align-self: flex-end; /* forces it to align to right */
 }
 
+.born-to-play-img {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 180px; /* adjust size as needed */
+  height: auto;
+  z-index: 2;
+}
+
 
     @media (max-width: 768px) {
       .horizontal-text {
@@ -166,10 +175,11 @@
 }
 
 .text-top {
-    color: #acc78b;
-    font-size: 26px;
-    max-width: 1000px;
-    margin-top: 20px;
+  color: #acc78b;
+  font-size: 26px;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 80px; 
 }
 
 .text-middle-wrapper {
@@ -314,6 +324,8 @@
       This city is too small for all of us: only one department can carry<br>
       the title of Ambassador of Futbol to Paris' Economics Departments.
     </div>
+    
+    <img src="BORNTOPLAY.png" alt="Born to Play" class="born-to-play-img">
   </section>
   
   <!-- Third Page -->
