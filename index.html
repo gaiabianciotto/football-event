@@ -152,44 +152,74 @@
       }
     }
     
-    /* Third section */
-    .third-section {
-      background-color: #30513d;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 20px 100px;
-      position: relative;
-      text-align: center;
-    }
+/* Third section */
+.third-section {
+  background-color: #30513d;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px 100px;
+  position: relative;
+  text-align: center;
+}
 
-    .text-top {
-      color: #acc78b;
-      font-size: 28px; /* Increased font size */
-      max-width: 900px;
-      margin-top: 40px;
-    }
+.text-top {
+  color: #acc78b;
+  font-size: 26px;
+  max-width: 900px;
+  margin-top: 40px;
+}
 
-    .text-middle {
-      color: #acc78b;
-      font-size: 42px; /* Increased font size */
-      font-weight: 900;
-      margin: auto 0;
-    }
+.text-middle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .test-button {
-      background-color: #adfe02;
-      color: black;
-      text-decoration: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 6px;
-      position: absolute;
-      bottom: 40px;
-    }
+.arrow {
+  font-size: 48px;
+  color: #adfe02;
+}
+
+.text-middle {
+  color: #acc78b;
+  font-size: 42px;
+  font-weight: 900;
+  margin: auto 0;
+}
+
+.test-button {
+  background-color: #adfe02;
+  color: black;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .horizontal-text {
+    font-size: 50px;
+  }
+  .second-section .first-text {
+    font-size: 24px;
+  }
+  .second-section .second-text {
+    font-size: 16px;
+  }
+  .text-middle {
+    font-size: 28px;
+  }
+  .arrow {
+    font-size: 32px;
+  }
+}
   </style>
 </head>
 <body>
@@ -294,10 +324,15 @@
       AND COME FACE US IN AN EPIC TOURNAMENT!
     </div>
   
-    <div class="text-middle">
-      TAKE THIS TEST TO HELP US <br>
-      MAKE THIS DREAM COME TRUE
+    <div class="text-middle-wrapper">
+        <div class="arrow">⬅</div>
+        <div class="text-middle">
+          TAKE THIS TEST TO HELP US <br>
+          MAKE THIS DREAM COME TRUE
+        </div>
+        <div class="arrow">➡</div>
     </div>
+      
   
     <a href="quiz.html" class="test-button">TAKE THE TEST</a>
   </section>
