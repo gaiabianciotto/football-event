@@ -56,7 +56,7 @@
 </head>
 <body>
   <h1>⚽ Answer the Fútbol Call!</h1>
-  <form action="https://formspree.io/f/xjkyadee" method="POST" onsubmit="handleSubmit(event)">
+  <form id="questionnaireForm" action="https://formspree.io/f/xjkyadee" method="POST">
     <div class="question">
       <label>1. What school are you in?</label>
       <input type="radio" name="school" value="PSE" required /> PSE<br/>
@@ -103,15 +103,35 @@
   </form>
 
   <script>
-    function handleSubmit(event) {
-      event.preventDefault(); // Prevents the form from being submitted in the usual way
-      
-      // You can use AJAX to submit the form data here if you prefer, but it's optional.
-      
-      // Redirect to the thank you page after successful submission
-      window.location.href = "thankyou.html";
-    }
+    // Handle form submission via AJAX
+    document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Create a FormData object to send form data
+      var formData = new FormData(this);
+
+      // Send the form data via fetch (AJAX request)
+      fetch('https://formspree.io/f/xjkyadee', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => {
+        // Check if the response is successful
+        if (response.ok) {
+          // Redirect to the thank you page
+          window.location.href = 'thankyou.html';
+        } else {
+          // Handle errors if any
+          alert('Oops! Something went wrong. Please try again later.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Oops! Something went wrong. Please try again later.');
+      });
+    });
   </script>
 </body>
 </html>
+
 
