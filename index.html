@@ -175,7 +175,7 @@
 }
 
 .text-top {
-  color: #acc78b;
+    color: #acc78b;
   font-size: 26px;
   max-width: 1000px;
   margin-top: 20px;
@@ -212,6 +212,25 @@
     position: absolute;
     bottom: 40px;
 }
+
+.bottom-corner-texts {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.bottom-left,
+.bottom-right {
+  color: #acc78b;
+  font-size: 26px;
+  font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
   .horizontal-text {
@@ -347,6 +366,12 @@
     </div>
   
     <a href="quiz.html" class="test-button">TAKE THE TEST</a>
+
+    <div class="bottom-corner-texts">
+        <div class="bottom-left">JUNE 2025</div>
+        <div class="bottom-right">STADE ELISABETH</div>
+      </div>
+      
   </section>
   
 
