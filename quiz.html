@@ -56,7 +56,19 @@
 </head>
 <body>
   <h1>⚽ Answer the Fútbol Call!</h1>
-  <form id="quizForm" onsubmit="handleSubmit(event)">
+ <!-- modify this form HTML and place wherever you want your form -->
+<form action="https://formspree.io/f/xjkyadee" method="POST">
+<label>
+  Your email:
+  <input type="email" name="email">
+</label>
+<label>
+  Your message:
+  <textarea name="message"></textarea>
+</label>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</form>
     <div class="question">
       <label>1. What school are you in?</label>
       <input type="radio" name="school" value="PSE" required /> PSE<br/>
