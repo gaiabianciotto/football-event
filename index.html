@@ -17,69 +17,74 @@
       font-family: Arial, sans-serif;
       scroll-behavior: smooth;
       color: #acc78b;
+      background-color: #30513d;
     }
 
     section {
       width: 100%;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
 
     /* First section */
     .first-section {
       display: flex;
-      background-color: #30513d;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       position: relative;
     }
 
     .container {
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
-      height: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
       position: relative;
     }
 
     .left {
-      flex: 2;
-      background: url('futbal logo.jpg') no-repeat left center;
+      flex: 1;
+      min-width: 300px;
+      height: 300px;
+      background: url('futbal logo.jpg') no-repeat center center;
       background-size: contain;
     }
 
     .come-and-play-wrapper {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      text-align: center;
     }
 
     .come-and-play-img {
-      height: 100vh;
-      width: auto;
+      max-width: 100%;
+      height: auto;
     }
 
     .right {
-      flex: 2;
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-left: 20px;
+      min-width: 300px;
     }
 
     .text-and-point {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
 
     .horizontal-text {
       font-family: 'Garet', sans-serif;
-      font-size: 80px;
+      font-size: 60px;
       text-transform: uppercase;
-      text-align: left;
+      text-align: center;
       color: #acc78b;
       opacity: 0;
       animation: fadeIn 4s ease-in-out forwards;
-      display: flex;
-      flex-direction: column;
     }
 
     .horizontal-text div {
@@ -93,286 +98,225 @@
     .horizontal-text div:nth-child(4) { animation-delay: 3s; }
 
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      to { opacity: 1; }
     }
 
     @keyframes fadeInWord {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      to { opacity: 1; }
     }
 
     .point-img {
-      width: 120px;
+      width: 80px;
       margin-top: 10px;
     }
 
     .born-to-play-img {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        width: 180px; /* adjust as needed */
-        z-index: 10;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 150px;
+      max-width: 100%;
     }
 
-
     /* Second section */
-.second-section {
-  background-color: #30513d;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 100px 50px;
-  gap: 60px; /* spacing between texts */
-}
+    .second-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 60px 20px;
+    }
 
-.second-section .first-text {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: left;
-  text-transform: uppercase;
-  color: #acc78b;
-  max-width: 1000px;
-  align-self: flex-start; /* forces it to align to left */
-}
+    .second-section .first-text {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-.second-section .second-text {
-  font-size: 20px;
-  text-align: right;
-  line-height: 1.6;
-  color: #acc78b;
-  max-width: 800px;
-  align-self: flex-end; /* forces it to align to right */
-}
+    .second-section .second-text {
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
+    /* Third section */
+    .third-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .text-top {
+      font-size: 22px;
+      max-width: 1000px;
+    }
+
+    .text-middle-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .arrow {
+      font-size: 40px;
+      color: #adfe02;
+    }
+
+    .text-middle {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .test-button {
+      background-color: #adfe02;
+      color: black;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .bottom-corner-texts {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .bottom-left, .bottom-right {
+      color: #adfe02;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Rolling ball */
+    .rolling-ball {
+      position: absolute;
+      width: 60px;
+      top: 0;
+      right: 0;
+      animation: ball-move 10s linear infinite;
+    }
+
+    @keyframes ball-move {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      30% { transform: translate(-30vw, 25vh) rotate(90deg); }
+      50% { transform: translate(-65vw, 25vh) rotate(180deg); }
+      60% { transform: translate(-70vw, 40vh) rotate(270deg); }
+      75% { transform: translate(-80vw, 55vh) rotate(360deg); }
+      100% { transform: translate(-90vw, 70vh) rotate(450deg); opacity: 0; }
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .horizontal-text {
-        font-size: 50px;
+        font-size: 36px;
       }
+
       .second-section .first-text {
-        font-size: 24px;
+        font-size: 22px;
       }
+
       .second-section .second-text {
         font-size: 16px;
       }
+
+      .text-middle {
+        font-size: 24px;
+      }
+
+      .arrow {
+        font-size: 24px;
+      }
+
+      .bottom-corner-texts {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+      }
     }
-
-/* Third section */
-.third-section {
-    background-color: #30513d;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    flex-direction: column;
-}
-
-.text-top {
-    color: #acc78b;
-  font-size: 26px;
-  max-width: 1000px;
-  margin-top: 20px;
-  margin-bottom: 80px; 
-}
-
-.text-middle-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-.arrow {
-    font-size: 100px;
-    color: #adfe02;
-}
-
-.text-middle {
-    color: #acc78b;
-    font-size: 60px;
-    font-weight: 900;
-    margin: auto 0;
-}
-
-.test-button {
-    background-color: #adfe02;
-    color: black;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 6px;
-    position: absolute;
-    bottom: 40px;
-}
-
-.bottom-corner-texts {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 40px;
-}
-
-.bottom-left,
-.bottom-right {
-  color: #adfe02;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-
-@media (max-width: 768px) {
-  .horizontal-text {
-    font-size: 50px;
-  }
-  .second-section .first-text {
-    font-size: 24px;
-  }
-  .second-section .second-text {
-    font-size: 16px;
-  }
-  .text-middle {
-    font-size: 28px;
-  }
-  .arrow {
-    font-size: 32px;
-  }
-}
   </style>
 </head>
 <body>
 
-
-<style>
-  /* Ball styling */
-  .rolling-ball {
-    position: absolute;
-    width: 80px; /* Adjust size */
-    top: 0;
-    right: 0;
-    opacity: 1;
-    animation: ball-move 10s linear infinite;
-  }
-
-/* Ball animation */
-@keyframes ball-move {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  30% {
-    transform: translate(-300px, 250px) rotate(90deg);
-  }
-  50% {
-    transform: translate(-650px, 250px) rotate(180deg);
-  } 
-  60% {
-    transform: translate(-700px, 400px) rotate(270deg);
-  }
-  75% {
-    transform: translate(-800px, 550px) rotate(360deg);
-  }
-  100% {
-    transform: translate(-900px, 700px) rotate(450deg);
-    opacity: 0;
-  }
-}
-
-.rolling-ball {
-  position: absolute;
-  width: 80px;
-  top: 0;
-  right: 0;
-  opacity: 1;
-  animation: ball-move **10s** linear infinite; /* Increased duration */
-}
-</style>
-
-  <!-- First Page -->
-  <section class="first-section">
-    <div class="container">
-      <div class="left"></div>
-      <div class="come-and-play-wrapper">
-        <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
-      </div>
-      <div class="right">
-        <div class="content-wrapper">
-          <div class="text-and-point">
-            <div class="horizontal-text">
-              <div>ANSWER</div>
-              <div>THE</div>
-              <div>FÚTBOL</div>
-              <div>CALL</div>
-            </div>
-            <img src="point.png" alt="Point" class="point-img">
-          </div>
+<!-- First Page -->
+<section class="first-section">
+  <div class="container">
+    <div class="left"></div>
+    <div class="come-and-play-wrapper">
+      <img src="COMEANDPLAY.png" alt="Come and Play" class="come-and-play-img">
+    </div>
+    <div class="right">
+      <div class="text-and-point">
+        <div class="horizontal-text">
+          <div>ANSWER</div>
+          <div>THE</div>
+          <div>FÚTBOL</div>
+          <div>CALL</div>
         </div>
+        <img src="point.png" alt="Point" class="point-img">
       </div>
     </div>
-    <img src="BORNTOPLAY.png" alt="Born to Play" class="born-to-play-img">
-  </section>
-
-  <!-- Second Page -->
-  <section class="second-section">
-    <div class="first-text">
-      "TO THE PEOPLES OF SCIENCES PO, CREST AND HEC"<br>
-      PSE UNILATERALLY DECLARES AN<br>
-      UNPROVOKED AND UNCOMPROMISING<br>
-      FÚTBOL WAR ON YOUR DEPARTMENTS.
-    </div>
-
-  <!-- Rolling Ball Image -->
-  <img src="ball.png" alt="Rolling Ball" class="rolling-ball">
-
-    <div class="second-text">
-      You didn't see this coming. But now, Futbol is knocking at your door.<br>
-      While you were estimating regressions, we were training in the rain.<br>
-      While you were solving models, we were studying the tactics.<br>
-      While you were counting the citations, we were counting the goals.<br>
-      We have been trained into a machine<br>
-      hungry to prove his worth outside the department walls.<br>
-      This city is too small for all of us: only one department can carry<br>
-      the title of Ambassador of Futbol to Paris' Economics Departments.
-    </div>
+  </div>
+  <img src="BORNTOPLAY.png" alt="Born to Play" class="born-to-play-img">
 </section>
-  
-  <!-- Third Page -->
-<section class="third-section">
-    <div class="text-top">
-      YOU CAN EITHER PROVE YOUR WORTH ON THE 105 X 68 MATRIX,<br>
-      OR LET US CLAIM THIS TITLE.<br>
-      SO GATHER YOUR PROFESSORS, YOUR PHDS, YOUR PREDOCS AND RAS<br>
-      AND COME FACE US IN AN EPIC TOURNAMENT!
-    </div>
-  
-    <div class="text-middle-wrapper">
-        <div class="arrow">➡</div>
-        <div class="text-middle">
-          TAKE THIS TEST TO HELP US <br>
-          MAKE THIS DREAM COME TRUE
-        </div>
-        <div class="arrow">⬅</div>
-    </div>
-  
-    <a href="quiz.html" class="test-button">TAKE THE TEST</a>
 
-    <div class="bottom-corner-texts">
-        <div class="bottom-left">JUNE 2025</div>
-        <div class="bottom-right">STADE ELISABETH</div>
-      </div>
-      
-  </section>
-  
+<!-- Second Page -->
+<section class="second-section">
+  <div class="first-text">
+    "TO THE PEOPLES OF SCIENCES PO, CREST AND HEC"<br>
+    PSE UNILATERALLY DECLARES AN<br>
+    UNPROVOKED AND UNCOMPROMISING<br>
+    FÚTBOL WAR ON YOUR DEPARTMENTS.
+  </div>
+  <img src="ball.png" alt="Rolling Ball" class="rolling-ball">
+  <div class="second-text">
+    You didn't see this coming. But now, Futbol is knocking at your door.<br>
+    While you were estimating regressions, we were training in the rain.<br>
+    While you were solving models, we were studying the tactics.<br>
+    While you were counting the citations, we were counting the goals.<br>
+    We have been trained into a machine<br>
+    hungry to prove his worth outside the department walls.<br>
+    This city is too small for all of us: only one department can carry<br>
+    the title of Ambassador of Futbol to Paris' Economics Departments.
+  </div>
+</section>
+
+<!-- Third Page -->
+<section class="third-section">
+  <div class="text-top">
+    YOU CAN EITHER PROVE YOUR WORTH ON THE 105 X 68 MATRIX,<br>
+    OR LET US CLAIM THIS TITLE.<br>
+    SO GATHER YOUR PROFESSORS, YOUR PHDS, YOUR PREDOCS AND RAS<br>
+    AND COME FACE US IN AN EPIC TOURNAMENT!
+  </div>
+
+  <div class="text-middle-wrapper">
+    <div class="arrow">➡</div>
+    <div class="text-middle">
+      TAKE THIS TEST TO HELP US <br>
+      MAKE THIS DREAM COME TRUE
+    </div>
+    <div class="arrow">⬅</div>
+  </div>
+
+  <a href="quiz.html" class="test-button">TAKE THE TEST</a>
+
+  <div class="bottom-corner-texts">
+    <div class="bottom-left">JUNE 2025</div>
+    <div class="bottom-right">STADE ELISABETH</div>
+  </div>
+</section>
 
 </body>
 </html>
