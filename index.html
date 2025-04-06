@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,6 @@
       font-family: Arial, sans-serif;
       scroll-behavior: smooth;
       color: #acc78b;
-      height: 100%;
     }
 
     section {
@@ -30,8 +29,6 @@
       display: flex;
       background-color: #30513d;
       position: relative;
-      width: 100%;
-      height: 100vh;
     }
 
     .container {
@@ -45,7 +42,6 @@
       flex: 2;
       background: url('futbal logo.jpg') no-repeat left center;
       background-size: contain;
-      height: 100%;
     }
 
     .come-and-play-wrapper {
@@ -56,7 +52,7 @@
     }
 
     .come-and-play-img {
-      height: 50vh; /* Change to relative units */
+      height: 100vh;
       width: auto;
     }
 
@@ -76,7 +72,7 @@
 
     .horizontal-text {
       font-family: 'Garet', sans-serif;
-      font-size: 8vw; /* Using vw for responsive sizing */
+      font-size: 80px;
       text-transform: uppercase;
       text-align: left;
       color: #acc78b;
@@ -107,126 +103,202 @@
     }
 
     .point-img {
-      width: 12vw; /* Use relative size */
-      margin-top: 2vh;
+      width: 120px;
+      margin-top: 10px;
     }
 
     .born-to-play-img {
         position: absolute;
-        bottom: 5vh;
-        right: 5vw;
-        width: 15vw; /* Adjust as needed */
+        bottom: 20px;
+        right: 20px;
+        width: 180px; /* adjust as needed */
         z-index: 10;
     }
 
+
     /* Second section */
-    .second-section {
-      background-color: #30513d;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: auto;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 10vh 5vw;
-      gap: 5vh;
+.second-section {
+  background-color: #30513d;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 50px;
+  gap: 60px; /* spacing between texts */
+}
+
+.second-section .first-text {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: #acc78b;
+  max-width: 1000px;
+  align-self: flex-start; /* forces it to align to left */
+}
+
+.second-section .second-text {
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.6;
+  color: #acc78b;
+  max-width: 800px;
+  align-self: flex-end; /* forces it to align to right */
+}
+
+    @media (max-width: 768px) {
+      .horizontal-text {
+        font-size: 50px;
+      }
+      .second-section .first-text {
+        font-size: 24px;
+      }
+      .second-section .second-text {
+        font-size: 16px;
+      }
     }
 
-    .second-section .first-text {
-      font-size: 5vw;
-      font-weight: bold;
-      text-align: left;
-      text-transform: uppercase;
-      color: #acc78b;
-      max-width: 80vw;
-      align-self: flex-start;
-    }
+/* Third section */
+.third-section {
+    background-color: #30513d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+}
 
-    .second-section .second-text {
-      font-size: 3vw;
-      text-align: right;
-      line-height: 1.6;
-      color: #acc78b;
-      max-width: 70vw;
-      align-self: flex-end;
-    }
+.text-top {
+    color: #acc78b;
+  font-size: 26px;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 80px; 
+}
 
-    /* Third section */
-    .third-section {
-      background-color: #30513d;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      text-align: center;
-      flex-direction: column;
-    }
+.text-middle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
 
-    .text-top {
-      color: #acc78b;
-      font-size: 3.5vw;
-      max-width: 80vw;
-      margin-top: 2vh;
-      margin-bottom: 5vh;
-    }
+.arrow {
+    font-size: 100px;
+    color: #adfe02;
+}
 
-    .text-middle-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5vw;
-    }
+.text-middle {
+    color: #acc78b;
+    font-size: 60px;
+    font-weight: 900;
+    margin: auto 0;
+}
 
-    .arrow {
-      font-size: 8vw;
-      color: #adfe02;
-    }
+.test-button {
+    background-color: #adfe02;
+    color: black;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 40px;
+}
 
-    .text-middle {
-      color: #acc78b;
-      font-size: 5vw;
-      font-weight: 900;
-      margin: auto 0;
-    }
+.bottom-corner-texts {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+}
 
-    .test-button {
-      background-color: #adfe02;
-      color: black;
-      text-decoration: none;
-      padding: 3vh 6vw;
-      font-size: 2vw;
-      font-weight: bold;
-      border-radius: 6px;
-      position: absolute;
-      bottom: 5vh;
-    }
+.bottom-left,
+.bottom-right {
+  color: #adfe02;
+  font-size: 26px;
+  font-weight: bold;
+}
 
-    .bottom-corner-texts {
-      position: absolute;
-      bottom: 2vh;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 5vw;
-    }
 
-    .bottom-left,
-    .bottom-right {
-      color: #adfe02;
-      font-size: 3vw;
-      font-weight: bold;
-    }
-
+@media (max-width: 768px) {
+  .horizontal-text {
+    font-size: 50px;
+  }
+  .second-section .first-text {
+    font-size: 24px;
+  }
+  .second-section .second-text {
+    font-size: 16px;
+  }
+  .text-middle {
+    font-size: 28px;
+  }
+  .arrow {
+    font-size: 32px;
+  }
+}
   </style>
 </head>
 <body>
 
-  <!-- First Section -->
+
+<style>
+  /* Ball styling */
+  .rolling-ball {
+    position: absolute;
+    width: 80px; /* Adjust size */
+    top: 0;
+    right: 0;
+    opacity: 1;
+    animation: ball-move 10s linear infinite;
+  }
+
+/* Ball animation */
+@keyframes ball-move {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  30% {
+    transform: translate(-300px, 250px) rotate(90deg);
+  }
+  50% {
+    transform: translate(-650px, 250px) rotate(180deg);
+  } 
+  60% {
+    transform: translate(-700px, 400px) rotate(270deg);
+  }
+  75% {
+    transform: translate(-800px, 550px) rotate(360deg);
+  }
+  100% {
+    transform: translate(-900px, 700px) rotate(450deg);
+    opacity: 0;
+  }
+}
+
+.rolling-ball {
+  position: absolute;
+  width: 80px;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  animation: ball-move **10s** linear infinite; /* Increased duration */
+}
+</style>
+
+  <!-- First Page -->
   <section class="first-section">
     <div class="container">
       <div class="left"></div>
@@ -250,7 +322,7 @@
     <img src="BORNTOPLAY.png" alt="Born to Play" class="born-to-play-img">
   </section>
 
-  <!-- Second Section -->
+  <!-- Second Page -->
   <section class="second-section">
     <div class="first-text">
       "TO THE PEOPLES OF SCIENCES PO, CREST AND HEC"<br>
@@ -259,7 +331,8 @@
       FÚTBOL WAR ON YOUR DEPARTMENTS.
     </div>
 
-    <img src="ball.png" alt="Rolling Ball" class="rolling-ball">
+  <!-- Rolling Ball Image -->
+  <img src="ball.png" alt="Rolling Ball" class="rolling-ball">
 
     <div class="second-text">
       You didn't see this coming. But now, Futbol is knocking at your door.<br>
@@ -271,34 +344,35 @@
       This city is too small for all of us: only one department can carry<br>
       the title of Ambassador of Futbol to Paris' Economics Departments.
     </div>
-  </section>
-
-  <!-- Third Section -->
-  <section class="third-section">
+</section>
+  
+  <!-- Third Page -->
+<section class="third-section">
     <div class="text-top">
       YOU CAN EITHER PROVE YOUR WORTH ON THE 105 X 68 MATRIX,<br>
       OR LET US CLAIM THIS TITLE.<br>
       SO GATHER YOUR PROFESSORS, YOUR PHDS, YOUR PREDOCS AND RAS<br>
       AND COME FACE US IN AN EPIC TOURNAMENT!
     </div>
-
+  
     <div class="text-middle-wrapper">
-      <div class="arrow">➡</div>
-      <div class="text-middle">
-        TAKE THIS TEST TO HELP US <br>
-        MAKE THIS DREAM COME TRUE
-      </div>
-      <div class="arrow">⬅</div>
+        <div class="arrow">➡</div>
+        <div class="text-middle">
+          TAKE THIS TEST TO HELP US <br>
+          MAKE THIS DREAM COME TRUE
+        </div>
+        <div class="arrow">⬅</div>
     </div>
-
+  
     <a href="quiz.html" class="test-button">TAKE THE TEST</a>
 
     <div class="bottom-corner-texts">
-      <div class="bottom-left">JUNE 2025</div>
-      <div class="bottom-right">STADE ELISABETH</div>
-    </div>
-
+        <div class="bottom-left">JUNE 2025</div>
+        <div class="bottom-right">STADE ELISABETH</div>
+      </div>
+      
   </section>
+  
 
 </body>
 </html>
